@@ -25,8 +25,7 @@ class PlayField{
    */
   startGame(){
     if(this.status == STOPPED ){
-    this.players[0] = new Player(10); // left player
-      this.players[1] = new Player(this.size.width-10); // right player
+    this.players[0] = new Player(10); 
       this.status = STARTED;
     }
   }
@@ -53,11 +52,7 @@ class PlayField{
         break;
     }
   }
-  /*
-   *  moveBall initiates the movement of the ball. First it tells the ball to
-   *  move and then it determines its next move. The field is responsible for
-   *  collision detection. Ball doesn't know its surrounding and PlayField does.
-   */
+  
 
   /*
    *  Every class draws itself on the canvas. This is the default draw method of
@@ -76,8 +71,6 @@ class PlayField{
    *  canvas: The canvas to draw on
    */
   buildBackgroundImage(canvas){
-    
-    canvas.fillStyle = "#000";
-    //canvas.fillRect(0,0,this.size.width, this.size.height);
+       canvas.clearRect(0,0,800, 600);
   }
 }

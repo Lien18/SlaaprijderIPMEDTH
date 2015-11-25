@@ -7,8 +7,8 @@
  */
 class Player{
   constructor(x){
-    this.position = new Position(x,380); // Player position. Paddle start at the top of the screen
-    this.points   = 0;                  // Scored points in the game
+    this.position = new Position(50,380); // Player position. Paddle start at the top of the screen
+    
     this.size     = new Size(80,20);    // Size of the paddle
     this.speed    = 10;                 // The speed of the paddle in px
   }
@@ -17,9 +17,16 @@ class Player{
    *  direction: -1 means up and 1 means down, choosen because it makes the calculation so easy!
    */
   move(direction){
-    if( direction == 1 || direction == -1 ){
+    if( direction == 1  || direction == -1 ){
       this.position.x += (direction*this.speed);
-    }
+    } 
+      if( this.position.x > 500) {
+       this.position.x = 500;
+         }
+      
+      if( this.position.x < 50) {
+        this.position.x = 50;
+         }
   }
   /*
    *  Every class draws itself on the canvas. This is the default draw method of
