@@ -76,7 +76,8 @@ class PlayField{
    *  canvas: The canvas to draw on
    */
   buildBackgroundImage(canvas){
+    
     canvas.fillStyle = "#000";
-    canvas.fillRect(0,0,this.size.width, this.size.height);
+    //canvas.fillRect(0,0,this.size.width, this.size.height);
   }
 }
